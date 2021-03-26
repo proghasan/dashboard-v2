@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
@@ -15,70 +16,125 @@
     <!-- Themify icon -->
     <link rel="stylesheet" href="./css/themify-icons.css">
     <link rel="stylesheet" href="./ie7/ie7.css">
-
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
     <title>Admin template</title>
-  </head>
-  <body>
-     <!-- left side start -->
-     <div class="vertical-nav" id="sidebar">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="people-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </symbol>
+    </svg>
+
+    <!-- left side start -->
+    <div class="vertical-nav" id="sidebar">
         <div class="media admin-area d-flex">
-          <img src="./img/admin.jpg">
-          <div class="media-body">
-            <h6 class="m-0 text-capitalize fw-normal">mohammad hasan</h6>
-            <p class="text-muted fw-normal">@admin</p>
-          </div>
+            <img src="./img/admin.jpg">
+            <div class="media-body">
+                <h6 class="m-0 text-capitalize fw-normal">mohammad hasan</h6>
+                <p class="text-muted fw-normal">@admin</p>
+            </div>
         </div>
 
         <!-- shortcut icon start -->
         <div class="shortcut-area">
-          <div class="shortcut-icon d-flex">
-            <a href="">
-              <span class="ti-user"></span>
-              <p>Customer</p>
-            </a>
-            <a href="">
-              <span class="ti-id-badge"></span>
-              <p>Supplier</p>
-            </a>
-            <a href="">
-              <span class="ti-palette"></span>
-              <p>Purchase</p>
-            </a>
-            <a href="">
-              <span class="ti-shopping-cart"></span>
-              <p>Sales</p>
-            </a>
-          </div>
+            <div class="shortcut-icon d-flex">
+                <a href="">
+                    <i class="far fa-users"></i>
+                    <p>Customer</p>
+                </a>
+                <a href="">
+                    <i class="fal fa-parachute-box"></i>
+                    <p>Supplier</p>
+                </a>
+                <a href="">
+                    <i class="fal fa-shopping-basket"></i>
+                    <p>Purchase</p>
+                </a>
+                <a href="">
+                    <i class="fab fa-shopify"></i>
+                    <p>Sales</p>
+                </a>
+            </div>
         </div>
         <!-- shortcut icon end -->
 
         <!-- left sidebar menu start -->
-        
-        <!-- left sidebar menu end -->
-      </div>
-      <!-- left side end -->
-
-      <!-- page content start-->
-      <div class="page-content" id="content">
-        <div class="container-fluid p-0">
-          <div class="row header-top">
-            <div class="col-lg-1 col-sm-1 col">
-              <a href="javascript:void(0)" id="toggle-sidebar"><span class="ti-align-left"></span></a>
-            </div>
-            <div class="col-md-4 d-none d-md-block col">
-              search area
-            </div>
-            <div class="col-lg-7 col-sm-11 col">
-              login information
-            </div>
-          </div>
+        <div class="menu">
+            <ul class="list-unstyled ps-0">
+                <li>
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#supplier-collapse" aria-expanded="false">
+                        <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg> -->
+                        <span class="ti-user"></span>
+                        Supplier
+                    </a>
+                  <div class="collapse" id="supplier-collapse">
+                    <ul class="list-unstyled fw-normal submenu">
+                      <li><a href="#">Supplier</a></li>
+                      <li><a href="#">Supplier Due</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                        <i class="far fa-users"></i>
+                        Customers
+                    </a>
+                  <div class="collapse" id="dashboard-collapse">
+                    <ul class="list-unstyled fw-normal submenu">
+                      <li><a href="#">Customers</a></li>
+                      <li><a href="#">Customers Due</a></li>
+                    </ul>
+                  </div>
+                </li>
+            </ul>
         </div>
-      </div>
-      
-      <!-- page content end-->
+        <!-- left sidebar menu end -->
+    </div>
+    <!-- left side end -->
+
+    <!-- page content start-->
+    <div class="page-content" id="content">
+        <div class="row header-top">
+            <div class="col-lg-1 col-sm-1 col-md-1 col">
+                <a href="javascript:void(0)" id="toggle-sidebar"><span class="ti-align-left"></span></a>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block col">
+                <form class="w-100 mt-1">
+                    <input type="search" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+            <div class="col-lg-7 col-sm-11 col-md-11 col" id="user-login-area">
+                <div class="flex-shrink-0 dropdown float-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://avatars.githubusercontent.com/u/31874131?v=4" alt="mdo" width="32" height="32" class="rounded-circle">
+                      Mohammad Hasan
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- main content start-->
+        <div id="main-content">
+            
+        </div>
+        <!-- main content end -->
+    </div>
+
+    <!-- page content end-->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="./js/dashboard.js?v=1.0"></script>
-  </body>
+</body>
+
 </html>
